@@ -7,22 +7,25 @@ naar waar een website nu staat.
 ## Wat er doorgestuurd wordt
 
 - De homepage gaat naar `https://digitaledienst.overheid.nl`.
+- `/NeRDS/...` gaat naar dezelfde pagina op
+  `https://nerds.digitaledienst.overheid.nl/...`. De NeRDS draait sinds
+  oktober 2026 op ZAD.
 
-GitHub Pages kan geen echte redirect geven. Daarom krijgt een verhuisde site
-per oude pagina een doorstuurpagina in een eigen map, met een directe
-`meta refresh` en een canonical naar het nieuwe adres. Google leest dat als een
-permanente redirect. `404.html` vangt de adressen op waar geen pagina voor is;
-een zoekmachine ziet daar alleen een 404.
+GitHub Pages kan geen echte redirect geven. Daarom staat er per oude pagina een
+doorstuurpagina in de map `NeRDS/`, met een directe `meta refresh` en een
+canonical naar het nieuwe adres. Google leest dat als een permanente redirect.
+`404.html` vangt de adressen op waar geen pagina voor is; een zoekmachine ziet
+daar alleen een 404.
 
 ## Wanneer een doorverwijzing aan staat
 
-Een repository met een eigen Pages-site gaat voor op deze site. Zolang de
-repository van de oude site nog Pages aan heeft staan, komt het adres daar uit
-en doet de map hier niets. De doorverwijzing gaat aan op het moment dat Pages
-in die repository uitgaat:
+Een repository met een eigen Pages-site gaat voor op deze site. Zolang
+`NederlandseDigitaleDienst/NeRDS` nog Pages aan heeft staan, komt
+`/NeRDS/...` daar uit en doet de map `NeRDS/` hier niets. De doorverwijzing
+gaat aan op het moment dat Pages in die repository uitgaat:
 
 ```sh
-gh api -X DELETE repos/NederlandseDigitaleDienst/<repository>/pages
+gh api -X DELETE repos/NederlandseDigitaleDienst/NeRDS/pages
 ```
 
 ## Een verhuisde site toevoegen

@@ -10,8 +10,9 @@
 
             // Sites that moved off GitHub Pages. The path behind the site
             // name, the query string and the anchor go along to the new address.
-            // Keys in lower case: 'site': 'https://site.example.org'
-            var moved = {};
+            var moved = {
+                'nerds': 'https://nerds.digitaledienst.overheid.nl'
+            };
             var site = path.split('/')[1] || '';
             var target = moved[site.toLowerCase()];
             if (target) {
