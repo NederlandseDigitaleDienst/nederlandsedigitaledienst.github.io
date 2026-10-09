@@ -24,14 +24,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 
 # Old directory on nederlandsedigitaledienst.github.io -> new address.
-#
-#     "Site": {
-#         "target": "https://site.example.org",
-#         "sitemap": "https://site.example.org/sitemap.xml",
-#     },
-#
-# A site without a sitemap takes "pages": ["", "about/"] instead.
-MOVED_SITES: dict[str, dict] = {}
+MOVED_SITES = {
+    "NeRDS": {
+        "target": "https://nerds.digitaledienst.overheid.nl",
+        "sitemap": "https://nerds.digitaledienst.overheid.nl/sitemap.xml",
+    },
+}
 
 PAGE = """<!DOCTYPE html>
 <html lang="nl">
