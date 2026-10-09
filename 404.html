@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina niet gevonden - Nederlandse Digitale Dienst</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+
+            // Sites that moved off GitHub Pages. The path behind the site
+            // name, the query string and the anchor go along to the new address.
+            // Keys in lower case: 'site': 'https://site.example.org'
+            var moved = {};
+            var site = path.split('/')[1] || '';
+            var target = moved[site.toLowerCase()];
+            if (target) {
+                var rest = path.slice(site.length + 1);
+                window.location.replace(target + rest + window.location.search + window.location.hash);
+                return;
+            }
+
+            window.location.replace("https://digitaledienst.overheid.nl/");
+        })();
+    </script>
+</head>
+<body>
+    <h1>Pagina niet gevonden</h1>
+    <p>De pagina die u zoekt, bestaat hier niet. Ga naar <a href="https://digitaledienst.overheid.nl/">digitaledienst.overheid.nl</a>.</p>
+</body>
+</html>
