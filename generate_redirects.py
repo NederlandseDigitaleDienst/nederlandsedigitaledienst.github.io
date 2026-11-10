@@ -29,6 +29,10 @@ MOVED_SITES = {
         "target": "https://nerds.digitaledienst.overheid.nl",
         "sitemap": "https://nerds.digitaledienst.overheid.nl/sitemap.xml",
     },
+    "loep": {
+        "target": "https://toon.rijks.app/nldd/loep",
+        "pages": [""],
+    },
 }
 
 PAGE = """<!DOCTYPE html>

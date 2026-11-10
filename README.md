@@ -10,6 +10,8 @@ naar waar een website nu staat.
 - `/NeRDS/...` gaat naar dezelfde pagina op
   `https://nerds.digitaledienst.overheid.nl/...`. De NeRDS draait sinds
   oktober 2026 op ZAD.
+- `/loep/` gaat naar `https://toon.rijks.app/nldd/loep/`. De pagina over loep
+  staat sinds november 2026 op Toon.
 
 GitHub Pages kan geen echte redirect geven. Daarom staat er per oude pagina een
 doorstuurpagina in de map `NeRDS/`, met een directe `meta refresh` en een
