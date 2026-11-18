@@ -15,6 +15,18 @@
                 'loep': 'https://toon.rijks.app/nldd/loep'
             };
             var site = path.split('/')[1] || '';
+
+            // Sites whose new address has other paths: everything goes to
+            // the new homepage. The pages that have a successor are handled
+            // by the redirect pages in the directory of the site.
+            var replaced = {
+                'design-system': 'https://design.digitaledienst.overheid.nl/'
+            };
+            if (replaced[site.toLowerCase()]) {
+                window.location.replace(replaced[site.toLowerCase()]);
+                return;
+            }
+
             var target = moved[site.toLowerCase()];
             if (target) {
                 var rest = path.slice(site.length + 1);

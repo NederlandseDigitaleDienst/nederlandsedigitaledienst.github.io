@@ -12,6 +12,16 @@ naar waar een website nu staat.
   oktober 2026 op ZAD.
 - `/loep/` gaat naar `https://toon.rijks.app/nldd/loep/`. De pagina over loep
   staat sinds november 2026 op Toon.
+- `/design-system/` gaat naar `https://design.digitaledienst.overheid.nl`.
+  Daar stond tot november 2026 de Storybook van het NLDD Designsysteem.
+
+De Storybook werkt anders dan de andere sites. Een pagina zat daar in de query
+string (`?path=/docs/components-actions-button--docs`), dus er is geen map per
+pagina. `design-system/redirect.js` leest het id uit het adres en stuurt door
+naar de pagina van dat component, patroon of onderwerp op de nieuwe site. Een
+id dat het script niet kent, gaat naar het overzicht van zijn sectie of naar de
+homepage. De lijst met ids komt uit de laatste Storybook-build en staat vast;
+verhuist een pagina op de nieuwe site, pas dan het pad in dat bestand aan.
 
 GitHub Pages kan geen echte redirect geven. Daarom staat er per oude pagina een
 doorstuurpagina in de map `NeRDS/`, met een directe `meta refresh` en een
