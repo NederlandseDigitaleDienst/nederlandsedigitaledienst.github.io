@@ -173,5 +173,7 @@
     var address = query.get("path") || query.get("id") || "";
     var id = address.replace(/^\/(docs|story)\//, "").split("--")[0].toLowerCase();
 
-    window.location.replace(target + pathFor(id));
+    // The anchor goes along: the headings of the guidelines kept their ids, and
+    // nldd lint of an older version links to them.
+    window.location.replace(target + pathFor(id) + window.location.hash);
 })();
